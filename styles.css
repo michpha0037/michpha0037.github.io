@@ -1,0 +1,233 @@
+/*Anything below this is from week 7 - exercise/practice during class example*/
+/*body{
+    color:white;
+    background-color: #000000;
+    font-size:16px;
+
+    line-height: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    margin:20px;
+    padding: 20px;
+    box-sizing:border-box;
+
+}
+
+div.title{
+    font-weight:bold;
+    font-size:30px;
+}
+
+div.subtitle{
+    font-style:oblique 50deg;
+    font-size:16px;
+    margin:10px;
+    color:rgb(180, 180, 180)
+}
+
+div.font-lightblue{
+    color:rgb(190, 232, 236);
+}
+
+div.font-grey{
+    color:rgb(180, 180, 180)
+}
+
+div.bg-black{
+    color:black;
+}
+
+div.quote{
+    font-size:15px;
+    margin:20px;
+    padding:5px;
+    background-color: grey;
+}
+
+p{
+    font-size:15px;
+    margin:20px;
+    padding:5px;
+
+}*/
+
+/*Actual working style guide(?)*/
+
+/*Main CSS (styling) Section*/
+html{
+    height:100vh;
+}
+body{
+    display:flex;
+    overflow:hidden;
+    justify-content: center;
+    align-items:center;
+    min-height:90vh;
+    margin:2em;
+
+    font-family:'Courier New', Courier, monospace;
+    font: size 1vw;
+
+    background-color: black;
+    color: white;
+}
+
+
+/*Grid layout*/
+.grid-container{
+    display:grid;
+    height:90vh;
+    grid-template-rows:1fr auto 1fr;
+    grid-template-columns: 2fr 5fr;
+    grid-template-areas: 
+    "header header header" 
+    "sidebar main main" 
+    "footer footer footer";
+    /*gap:10px;*/
+}
+
+.grid-header{
+    grid-area:header;
+ 
+}
+.grid-sidebar{
+    grid-area:sidebar;
+}
+.grid-aside{
+    grid-area:aside;
+}
+.grid-content{
+    grid-area:main;
+}
+.grid-footer{
+    grid-area:footer;
+}
+
+.card{
+    padding:0px;
+    border: solid 1px white;
+}
+
+.item-1{
+    /*background-color: red;*/
+    grid-area:header;
+    padding-left:40px;
+    padding-right:40px;
+    align-content:center;
+}
+
+.item-2{
+    /*background-color: blue;*/
+    grid-area:sidebar;
+    padding:20%;
+    align-content:center;
+}
+
+.item-3{
+    /*background-color: green;*/
+    grid-area:main;
+    padding:0px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    gap:10px;
+}
+
+.item-4{
+    /*background-color:goldenrod;*/
+    grid-area:aside;
+    padding:15px;
+    padding-top:40px;
+    float:left;
+    width:auto;
+    height:fit-content;
+    text-align: right;
+    border-right:solid 1px white;
+}
+
+.item-5{
+    /*background-color:rgb(36, 156, 148);*/
+    grid-area:main;
+    padding:20px 70px 20px 120px;
+    height:max-content;
+    border:none;
+}
+
+.item-6{
+    /*background-color: purple;*/
+    grid-area:footer;
+    display:flex;
+    flex-direction:row; 
+    justify-content:space-between;
+    padding-left:40px;
+    padding-right:40px;
+}
+
+.vertical-line{
+    width: 1px; 
+    background-color: white; 
+    height: 100%; 
+    float: left; 
+}
+
+.button{
+    background-color:.background-blue;
+}
+
+
+
+/*Text Styling*/
+h1{
+    font-size: 3vw;
+    font-weight: bold;
+    margin:0px;
+}
+
+.caption{
+    font-size:16px;
+}
+
+/*Colour Styling*/
+.font-lightgrey{
+    /*used for captions and comments mostly*/
+    color:#AAB2C0;
+}
+
+.font-red{
+    color:#ff2f2f;
+    font-weight:bold;
+}
+
+#background-blue{
+    color:#0300F4;
+}
+
+.indent-1{
+    padding-top:70px; 
+    padding-left:40px;
+}
+
+.indent-2{
+    padding-top:0px; 
+    padding-left:60px;
+}
+
+.indent-3{
+    padding-top:0px; 
+    padding-left:80px;
+}
+
+.indent-4{
+    padding-top:70px; 
+    padding-left:100px;
+}
+
+.indent-5{
+    padding-top:70px; 
+    padding-left:120px;
+}
+
+.indent-6{
+    padding-top:70px; 
+    padding-left:140px;
+}
+
+/*ȅ̸̙͓̰̫̟̕v̴̜͙̾̎̆́i̷͉̳̝͍̜̔̔̒̚l̴̳͚̑̃̎̓͆̚ͅ*/
