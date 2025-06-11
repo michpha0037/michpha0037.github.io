@@ -34,38 +34,39 @@
     
 </div>
 
-<!--Make this whole thing a style/class later-->
-<div style="background-color: black; border: 1px solid green; width:90%; height:40px; display:flex; flex-direction:column; position:fixed; top:10px; left:50%; transform: translateX(-50%);align-items:center; justify-content:center; text-align: center; padding-left:30px; padding-right:30px;">
-    <div style="display:flex; justify-content: space-between; width:100%;">
-        <p style="color:rgb(8, 255, 8); margin:0; font-size:12px; font-weight:800;">CDS3001 (2025)</p>
-       
-        <p style="color:rgb(8, 255, 8); margin:0; font-size:12px; font-weight:800; padding-left:75px;">CAT PICTURES PLEASE - NAOMI KRITZER</p>
-       
-        <p style="color:rgb(8, 255, 8); margin:0; font-size:12px; font-weight:800;">MICHELLE PHAM 32993811</p>
+<!--Header and Footer Containers-->
+<div id="header-footer">
+    <div id="header" class="header">
+        <div class="fixed-container">
+            <p class="fixed-text"> CDS3001 (2025)</p>
+        
+            <p class="fixed-text" style="padding-left:65px;">Cat Pictures Please - Naomi Kritzer</p>
+        
+            <p class="fixed-text">Michelle Pham 32993811</p>
+        </div>
+    </div>
+
+    <div id="footer" class="footer">
+        <div class="fixed-container">
+            <p class="fixed-text">Website Development</p>
+            <p class="fixed-text" style="padding-right:50px;">Future Communication</p>
+            <p class="fixed-text">Milestone 02</p>
+        </div>
     </div>
 </div>
-
-<div style="background-color: black; border: 1px solid green; width:90%; height:40px; display:flex; position:fixed; bottom:15px; left:50%; transform: translateX(-50%);align-items:center; justify-content:center; text-align: center; padding-left:30px; padding-right:30px;">
-    <div style="display:flex; justify-content: space-between; width:100%;">
-        <p style="color:rgb(8, 255, 8); margin:0; font-size:12px; font-weight:800;">WEBSITE DEVELOPMENT</p>
-        <p style="color:rgb(8, 255, 8); margin:0; font-size:12px; font-weight:800; padding-right:50px;">FUTURE COMMUNICATION</p>
-        <p style="color:rgb(8, 255, 8); margin:0; font-size:12px; font-weight:800;">MILESTONE 02</p>
-    </div>
-</div>
-
 
 <!--Video Div-->
-    <div id="video-fade" class="video">
-    <video autoplay muted controls>
+<div id="video-fade" class="video">
+    <video autoplay controls>
         <source src="video/Cds3001-Catpicturespleasevideo-Michellepham-32993811.mp4" type="video/mp4">
     </video>
-   </div>
+</div>
 
 <!--Text Content Paragraphs-->
 <main id="container">
-    <div id="paragraph-1" class="content-container containerRight" style="width:60%; margin-top:50px;">
-            <div class="number-list">     
-                <p id="number-list" style="color:var(--subtleGreen); line-height:2;">
+    <div id="paragraph-1" class="content-container" style="width:60%; margin-top:50px; margin-left:auto; opacity:1;">
+            <div id="list1" class="number-list">     
+                <p id="number-list" style="line-height:2;">
                     <script>
                         const container=document.getElementById('number-list');
                             for (let i=1;i<=20; i++){
@@ -535,7 +536,7 @@
         </div>
 </main>
     
-
+    <script src="class-changes.js"></script>
     <script src="script.js"></script>
 
 </body>

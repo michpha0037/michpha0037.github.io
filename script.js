@@ -1,22 +1,5 @@
-//This is all filler text. Will change it later to fit my needs.
-const classChanges = [
-
-  { time: 4, target: ".p1", add: "highlight" },
-
-  { time: 6, target: ".p1", remove: "highlight" },
-  { time: 6, target: ".p2", add: "highlight" },
-
-  { time: 8, target: ".p2", remove: "highlight" },
-  { time: 8, target: ".p3", add: "highlight" },  
-
-
-  { time: 10, target: ".p3", remove: "highlight" },
-  { time: 10, target: ".p4", add: "highlight" },  
-
-];
-
 document.addEventListener("DOMContentLoaded", function () {
-  const video = document.querySelector(".video");
+  const video = document.querySelector(".video video");
   const welcome = document.querySelector(".welcome");
 
   welcome.addEventListener("click", function () {
@@ -72,3 +55,41 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+console.log("Applying class change:", change);
+
+
+/*document.addEventListener("DOMContentLoaded", function () {
+  const video = document.querySelector(".video video");
+  const welcome = document.querySelector(".welcome");
+
+  welcome.addEventListener("click", function () {
+    welcome.classList.remove("visible");
+    document.body.style.overflow = "auto"; 
+    window.scrollTo(0,0);
+    video.play();
+  });
+
+
+  const appliedTimes = {};
+
+    video.addEventListener("timeupdate", function () {
+      const changesAtCurrentTime = classChanges.filter(function (change) {
+        return video.currentTime >= change.time && appliedTimes[change.time] !== true;
+  });
+
+    changesAtCurrentTime.forEach(function (change) {
+      const elements = document.querySelectorAll(change.target);
+    if (change.remove !== undefined) {
+      const removeClasses = Array.isArray(change.remove) ? change.remove : [change.remove];
+      elements.forEach(el => removeClasses.forEach(cls => el.classList.remove(cls)));
+    }
+    if (change.add !== undefined) {
+      const addClasses = Array.isArray(change.add) ? change.add : [change.add];
+      elements.forEach(el => addClasses.forEach(cls => el.classList.add(cls)));
+    }
+      appliedTimes[change.time] = true;
+    });
+  });
+});*/
