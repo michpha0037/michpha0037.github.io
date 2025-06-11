@@ -19,13 +19,13 @@
     --secondaryGray:#F2F4F0;
 
     /*Font Sizes*/
-    --bodySize:18px;
     --h1Size:48px;
     --h2Size:28px;
-    --h3Size:20px;
-
-    --heightFit:100%;
+    --h3Size:21px;
+    --bodySize:18px;
 }
+
+/*-----------------------------------------------------------------*/
 
 video{
     width:100%;
@@ -35,26 +35,98 @@ video{
 .video{
     width:300px;
     position:fixed;
-    bottom:30px;
-    left:30px;
+    bottom:75px;
+    left:40px;
     border:solid 1px var(--subtleGreen);
 }
 
+#video-fade{
+    opacity:0;
+    animation: video-fade 2s 1s ease forwards;
+}
+
+@keyframes video-fade{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+/*-----------------------------------------------------------------*/
+
+/*Website display configurations*/
 body{
-    /*Website display configurations*/
     display:grid;
     margin:3em;
+    overflow-y:hidden;
+    /*overflow-y:scroll;*/
 
     /*Website typeface*/
     font-family:'JetBrains Mono';
 
     /*Website background colour*/
-    background-color: var(--primaryBackground);
-    
-    
+    background-color: var(--primaryBackground);  
 }
 
+/*-----------------------------------------------------------------*/
 
+/*Scrollbar config*/
+::-webkit-scrollbar{
+    width:10px;
+    background-color: #000000;
+}
+
+::-webkit-scrollbar-track {
+    background-color:#8c8c8c52;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:var(--mainGreen); 
+    width:10px;
+}
+
+/*-----------------------------------------------------------------*/
+
+/*Grid Containers*/
+div.content-container{
+    margin:20px;
+    overflow-y:hidden;
+    overflow-x:hidden;
+    width:auto;
+    height:fit-content;
+
+}
+
+div.containerRight{
+    margin-left:auto;
+}
+
+.number-list{
+    float:left;
+    padding-left:10px;
+    text-align:right;
+}
+
+.text-container{
+    align-content:center;
+    padding:0px 80px 0px 80px;
+    height:fit-content;
+    display:flex; 
+    flex-direction: column;
+}
+
+.section-6{
+    grid-area:footer;
+    align-items:center;
+    text-align:center;
+    padding:0px 20px 0px 20px;
+    margin: 0px 10px 0px 10px;
+
+    /*Section visual config*/
+    border:1px solid white;
+}
+
+/*-----------------------------------------------------------------*/
 
 /*Font types*/
 h1{
@@ -78,20 +150,6 @@ h3{
     margin-top:5px;
 }
 
-h4{
-    font-size:16px;
-    color:var(--subtleGreen);
-    text-align: center; 
-    border-bottom: 1px dashed var(--subtleGreen); 
-    line-height: 0.1em;
-    margin: 10px 0 20px;
-}
-
-h4 span{
-    background:var(--primaryBackground); 
-    padding:0 10px; 
-}
-
 p{
     font-size:var(--bodySize);
     color:var(--mainGreen);
@@ -100,31 +158,7 @@ p{
 }
 
 
-/*For specific headings*/
-.heading{
-    /*Colour is also used for footer*/
-    font-size:13px;
-    font-weight:800;
-    color:var(--mainGreen);
-    margin-top:15px;
-    width:auto;
-}
-
-.subheading{
-    font-size:13px;
-    font-weight:800;
-    color:var(--primaryBackground);
-    margin-top:15px;
-    width:auto;
-}
-
-.heading3{
-    font-size:var(--h3Size);
-    color:var(--mainGreen);
-    font-weight:400;
-}
-
-/*Span Text Layouts are used to allow inline text, otherwise there's too much of a gap around the block elements (h1,h2,h3, etc)*/
+/*Span Text Layouts to allow for inline text, otherwise there's too much of a gap around the block elements (h1,h2,h3, etc)*/
 .spanHeading{
     font-size: var(--h1Size);
     color:var(--mainGreen);
@@ -143,7 +177,6 @@ p{
     padding:0;
 }
 
-
 #inlineText h1,
 #inlineText p {
     display: inline;
@@ -151,19 +184,22 @@ p{
     line-height:1.6;
 }
 
-/*Text Layout*/
-.justifyRight{
-    margin-left:auto;
-    text-align:right;
+/*-----------------------------------------------------------------*/
+
+/*For paragraph breaks*/
+h4{
+    font-size:16px;
+    color:var(--subtleGreen);
+    text-align: center; 
+    border-bottom: 1px dashed var(--subtleGreen); 
+    line-height: 0.1em;
+    margin: 10px 0 20px;
 }
 
-/*Paragraph Break in-between lines*/
-.break10{
-    height:10vh;
-}
-
-.break20{
-    height:20vh;
+/*For the background of the paragraph break*/
+h4 span{ 
+    background:var(--primaryBackground); 
+    padding:0 10px; 
 }
 
 .breakLine{
@@ -175,7 +211,32 @@ p{
     margin-bottom:100px;
 }
 
-/*Text Box Dimesions*/
+/*Vertical connecting line between sentences*/
+.vertical-line{
+    width: 1px;
+    background-color:var(--subtleGreen);
+    height: 100%;
+    float: left;
+}
+
+/*-----------------------------------------------------------------*/
+
+/*Text Layout*/
+.justifyRight{
+    margin-left:auto;
+    text-align:right;
+}
+
+/*Breaks between sentences in the paragraph*/
+.break10{
+    height:10vh;
+}
+
+.break20{
+    height:20vh;
+}
+
+/*Text Box Dimesions (Sometimes it doesn't work so I have to put style in the div box anyways*/
 .width50{
     width:50%;
 }
@@ -192,55 +253,56 @@ p{
     width:80%;
 }
 
-/*Horizontal Line Break*/
-hr{
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid var(--subtleGreen);
-    margin: 10vh;
+.width90{
+    width:90%;
 }
 
-.vertical-line{
-    width: 1px;
-    background-color:var(--subtleGreen);
-    height: 100%;
-    float: left;
-}
+/*-----------------------------------------------------------------*/
 
 /*Text Colours*/
-.textRed{
-    color:var(--errorRed);
-}
-
-.textGreen{
+.textGreen{ 
     color:var(--mainGreen);
 }
 
-.textSubtlegreen{
+.textRed{ /*Used to emphasise something bad, negative or evil*/
+    color:var(--errorRed);
+}
+
+.textSubtlegreen{ /*For comments, captions, inner monologue*/
     color:var(--subtleGreen);
 }
 
-.textYellow{
+.textYellow{ /*To highlight certain phrases and put emphasis or to denote something as positive*/
     color: var(--accentYellow);
 }
 
-.textWhite{
-color:var(--highlightWhite);
-}
-
-
-.textDGray{
-    color:var(--subtleGreen);
-}
-
-.textBlack{
+.textBlack{ /*Used to contrast boxed text and make the text visible*/
     color:var(--primaryBackground);
 }
 
-.textBlue{
+.textBlue{ /*Used for one specific line*/
     color:#35d7ff;
 }
+
+#gradient-text-toRed{
+    background-image: linear-gradient(var(--mainGreen), var(--errorRed));
+    color: transparent;
+    background-clip: text;
+}
+
+#gradient-text-toBlack{
+    background-image: linear-gradient(180deg,rgba(254, 1, 0, 1) 51%, rgba(254, 1, 0, 0.4) 100%);
+    color: transparent;
+    background-clip: text;
+}
+
+.blur{
+    height: 600px;
+    -webkit-mask-image: linear-gradient(black, transparent);
+    mask-image: linear-gradient (black, transparent);
+}
+
+/*-----------------------------------------------------------------*/
 
 /*Text Box Colours*/
 .boxRed{
@@ -270,6 +332,8 @@ color:var(--highlightWhite);
     width:fit-content;
 }
 
+/*-----------------------------------------------------------------*/
+
 /*Font Styles*/
 .italic{
     font-style: italic;
@@ -283,62 +347,64 @@ color:var(--highlightWhite);
     font-weight:400;
 }
 
+/*-----------------------------------------------------------------*/
+/*Welcome splash screen config*/
+.welcome{
+    display:none;
+    position:fixed;
+    z-index:1000;
+    top:0;
+    left:0;
 
-/*Scrollbar config*/
-::-webkit-scrollbar{
-    width:20px;
-    background-color: #000000;
-}
-
-::-webkit-scrollbar-track {
-    background-color:#8c8c8c52;
-    margin-top:50px;
-    margin-bottom:50px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color:var(--mainGreen); 
-    width:10px;
-}
-
-
-/*Grid Containers*/
-div.content-container{
-    margin:20px;
-    overflow-y:hidden;
-    overflow-x:hidden;
-    width:auto;
-    height:fit-content;
-
-}
-
-div.containerRight{
-    margin-left:auto;
-}
-
-
-.number-list{
-    float:left;
-    padding-left:10px;
-    text-align:right;
-}
-
-.text-container{
-    align-content:center;
-    padding:0px 80px 0px 80px;
-    height:fit-content;
-    display:flex; 
-    flex-direction: column;
-}
-
-
-.section-6{
-    grid-area:footer;
+    width:100%;
+    height:100%;
     align-items:center;
-    text-align:center;
-    padding:0px 20px 0px 20px;
-    margin: 0px 10px 0px 10px;
+    justify-content:center;
+  
+    cursor:pointer;
+   
+    color:var(--mainGreen);
+    background-color: var(--primaryBackground);
+}
 
-    /*Section visual config*/
-    border:1px solid white;
+.welcome.visible{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+/*-----------------------------------------------------------------*/
+/*Splash screen elements + animations*/
+#welcome-popup.popup{
+    width:fit-content;
+    padding:30px;
+    padding-bottom:5px;
+    margin-bottom:15px;
+    border: 1px solid var(--mainGreen);
+    opacity:0;
+    animation: popup 2s 1s ease forwards;
+}
+
+#welcome-fade{
+    opacity:0;
+    animation: welcome-fade 1s ease forwards;
+}
+
+#disclaimer-fade{
+    opacity:0;
+    animation: welcome-fade 6s 1s ease forwards;
+}
+
+@keyframes popup{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@keyframes welcome-fade{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@keyframes disclaimer-fade{
+    from{opacity:0;}
+    to{opacity:1;}
 }

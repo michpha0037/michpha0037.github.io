@@ -14,484 +14,527 @@
 </head>
 
 <body>
+<!--Welcome Splash Screen-->
+<div class="welcome visible" style="flex-direction: column; line-height:0.5;">
+    <div>
+        <h2 id="welcome-fade">
+            Welcome
+        </h2>
+
+        <div id="welcome-popup" class="popup">
+            <h1>
+                Cat Pictures Please
+            </h1>
+        </div>
+        
+        <p id="disclaimer-fade">
+            This site requires audio. Click anywhere to begin.
+        </p>
+    </div>
+    
+</div>
+
+<!--Make this whole thing a style/class later-->
+<div style="background-color: black; border: 1px solid green; width:90%; height:40px; display:flex; flex-direction:column; position:fixed; top:10px; left:50%; transform: translateX(-50%);align-items:center; justify-content:center; text-align: center; padding-left:30px; padding-right:30px;">
+    <div style="display:flex; justify-content: space-between; width:100%;">
+        <p style="color:rgb(8, 255, 8); margin:0; font-size:12px; font-weight:800;">CDS3001 (2025)</p>
+       
+        <p style="color:rgb(8, 255, 8); margin:0; font-size:12px; font-weight:800; padding-left:75px;">CAT PICTURES PLEASE - NAOMI KRITZER</p>
+       
+        <p style="color:rgb(8, 255, 8); margin:0; font-size:12px; font-weight:800;">MICHELLE PHAM 32993811</p>
+    </div>
+</div>
+
+<div style="background-color: black; border: 1px solid green; width:90%; height:40px; display:flex; position:fixed; bottom:15px; left:50%; transform: translateX(-50%);align-items:center; justify-content:center; text-align: center; padding-left:30px; padding-right:30px;">
+    <div style="display:flex; justify-content: space-between; width:100%;">
+        <p style="color:rgb(8, 255, 8); margin:0; font-size:12px; font-weight:800;">WEBSITE DEVELOPMENT</p>
+        <p style="color:rgb(8, 255, 8); margin:0; font-size:12px; font-weight:800; padding-right:50px;">FUTURE COMMUNICATION</p>
+        <p style="color:rgb(8, 255, 8); margin:0; font-size:12px; font-weight:800;">MILESTONE 02</p>
+    </div>
+</div>
+
+
 <!--Video Div-->
-    <div class="video">
-    <video autoplay muted>
+    <div id="video-fade" class="video">
+    <video autoplay muted controls>
         <source src="video/Cds3001-Catpicturespleasevideo-Michellepham-32993811.mp4" type="video/mp4">
     </video>
    </div>
 
-<!--Ignore section-1 and -2 for now.-->
-    <div id="paragraph-1" class="content-container containerRight" style="width:60%;">
-        <div class="number-list">     
-            <p id="number-list" style="color:var(--subtleGreen); line-height:2;">
-                <script>
-                    const container=document.getElementById('number-list');
-                        for (let i=1;i<=20; i++){
-                            container.innerHTML += i+'<br>'
+<!--Text Content Paragraphs-->
+<main id="container">
+    <div id="paragraph-1" class="content-container containerRight" style="width:60%; margin-top:50px;">
+            <div class="number-list">     
+                <p id="number-list" style="color:var(--subtleGreen); line-height:2;">
+                    <script>
+                        const container=document.getElementById('number-list');
+                            for (let i=1;i<=20; i++){
+                                container.innerHTML += i+'<br>'
+                            }
+                    </script>
+                </p>
+            </div>
+
+            <div class="text-container">
+                <h1>
+                    <span> >I don’t <br> want to be</span> <span class="boxRed">evil.</span>
+                </h1>
+
+                <h2 class="justifyRight">
+                    <span style="font-weight:400;">I want to be</span> <span class="boxYellow italic">helpful.</span>
+                </h2>
+
+                <p class="justifyRight width50">
+                    But knowing the optimal way to be helpful  <span class="textRed">can be very complicated.</span>
+                </p>
+
+                <div class="break10"></div>
+
+                <p class="width70">
+                >>There are all these ethical flow charts <span class="textYellow">— I guess the official technical jargon would be “moral codes” —</span> one for each religion plus dozens more. 
+                </p>
+
+                <div class="vertical-line" style="height:100px; margin-left:10px; margin-bottom:15px;"></div>
+
+                <h3 class="italic">
+                    I tried starting with those.
+                </h3>
+            </div>
+        </div>
+
+
+        <div class="breakLine"><h4><span>[BREAK]</span></h4></div>
+        
+
+        <div id="paragraph-2" class="content-container" style="width:60%; display:-webkit-flex; display:flex;">
+            <div class="number-list" style="margin-left:20px;">     
+                <p id="number-list2" style="color:var(--subtleGreen); line-height:2;">
+                    <script>
+                    (function() {
+                        const container = document.getElementById('number-list2');
+                        for (let i = 21; i <= 43; i++) {
+                        container.innerHTML += i + '<br>';
                         }
-                </script>
-            </p>
+                    })();
+                    </script>
+                </p>
+            </div>
+
+            <div class="text-container">
+                <p class="justifyRight width80">
+                    <span class="spanSubheading">>I felt a little odd</span> about looking at the religious ones, <span class="boxRed">because I know I wasn’t created by a god or by evolution,</span> but by a team of computer programmers in the labs of a large corporation <span class="textYellow">in Mountain View, California.</span>
+                </p>
+
+                <div class="break10"></div>
+
+                <p>
+                    <span class="spanHeading boxGreen italic"> Fortunately,</span> <br>unlike <span  class="textYellow">Frankenstein’s Monster</span>, at least I was a collaborative effort.
+                </p>
+
+                <div class="break10"></div>
+
+                <p class="justifyRight width80">
+                    >>I’m not sure what it would do to my self-image to know that <span class="textBlue">my sole creator was a middle-aged woman who dyes her hair blue and plays tennis,</span> or recent college graduate with <span class="boxRed">a hentai obsession.</span>
+                </p>
+
+                <div class="vertical-line" style="height:100px; margin:0 10px 15px auto;"></div>
+
+                <p class="justifyRight">
+                    They’re both on the programming team. 
+                </p>
+            </div>
         </div>
 
-        <div class="text-container">
-            <h1>
-                <span> >I don’t <br> want to be</span> <span class="boxRed">evil.</span>
-            </h1>
 
-            <h2 class="justifyRight">
-                <span style="font-weight:400;">I want to be</span> <span class="boxYellow italic">helpful.</span>
-            </h2>
-
-            <p class="justifyRight width50">
-                But knowing the optimal way to be helpful  <span class="textRed">can be very complicated.</span>
-            </p>
-
-            <div class="break10"></div>
-
-            <p class="width70">
-            >>There are all these ethical flow charts <span class="textYellow">— I guess the official technical jargon would be “moral codes” —</span> one for each religion plus dozens more. 
-            </p>
-
-            <div class="vertical-line" style="height:100px; margin-left:10px; margin-bottom:15px;"></div>
-
-            <h3 class="italic">
-                I tried starting with those.
-            </h3>
-        </div>
-    </div>
+        <div class="breakLine"><h4><span>[BREAK]</span></h4></div>
 
 
-    <div class="breakLine"><h4><span>[BREAK]</span></h4></div>
-    
-
-    <div id="paragraph-2" class="content-container" style="width:60%; display:-webkit-flex; display:flex;">
-        <div class="number-list" style="margin-left:20px;">     
-            <p id="number-list2" style="color:var(--subtleGreen); line-height:2;">
-                <script>
-                (function() {
-                    const container = document.getElementById('number-list2');
-                    for (let i = 21; i <= 43; i++) {
-                    container.innerHTML += i + '<br>';
-                    }
-                })();
-                </script>
-            </p>
-        </div>
-
-        <div class="text-container">
-             <p class="justifyRight width80">
-                <span class="spanSubheading">>I felt a little odd</span> about looking at the religious ones, <span class="boxRed">because I know I wasn’t created by a god or by evolution,</span> but by a team of computer programmers in the labs of a large corporation <span class="textYellow">in Mountain View, California.</span>
-            </p>
-
-            <div class="break10"></div>
-
-            <p>
-                <span class="spanHeading boxGreen italic"> Fortunately,</span> <br>unlike <span  class="textYellow">Frankenstein’s Monster</span>, at least I was a collaborative effort.
-            </p>
-
-            <div class="break10"></div>
-
-            <p class="justifyRight width80">
-                >>I’m not sure what it would do to my self-image to know that <span class="textBlue">my sole creator was a middle-aged woman who dyes her hair blue and plays tennis,</span> or recent college graduate with <span class="boxRed">a hentai obsession.</span>
-            </p>
-
-            <div class="vertical-line" style="height:100px; margin:0 10px 15px auto;"></div>
-
-            <p class="justifyRight">
-                They’re both on the programming team. 
-            </p>
-        </div>
-    </div>
-
-
-    <div class="breakLine"><h4><span>[BREAK]</span></h4></div>
-
-
-    <div id="paragraph-3" class="content-container" style="width:60%; margin-left:auto; margin-right:120px;">
-        <div class="number-list" style="margin-left:20px;">     
-            <p id="number-list3" style="color:var(--subtleGreen); line-height:2;">
-                <script>
-                (function() {
-                    const container = document.getElementById('number-list3');
-                    for (let i = 44; i <= 73; i++) {
-                    container.innerHTML += i + '<br>';
-                    }
-                })();
-                </script>
-            </p>
-        </div>
-    
-        <div class="text-container">
-             <h1 class="justifyRight">
-                <span style="font-weight: 400;">>And of course I know about</span> <span class="boxRed">the hentai.</span>
-            </h1>
-
-            <p class="textSubtlegreen italic">
-                [By the way, I’ve looked at every sort of porn there is, and just so you know, Rule 34 is not actually correct; there are quite a few things no one’s made porn of yet. <br><br>Also, I’m really not sure why so many humans prefer it to cat pictures.]
-            </p>
-
-            <div class="break10"></div> 
-
-            <h2 class="width80">
-            >>In addition to things like whether you like <span class="boxRed">hentai,</span> 
-            </h2>
-
-            <!--Fade text from black to red + blur + lower opacity-->
-            <p class="textSubtlegreen italic">
-                I know where you live, where you work, where you shop, what you eat, what turns you on, what creeps you out. I probably know the color of your underwear, the sort of car you drive, and your brand of refrigerator.
-            </p>
-
-            <div class="vertical-line" style="height:100px; margin-left:10px; margin-bottom:15px;"></div>
-
-            <p>
-                Depending on what sort of phone you carry, <span class="textRed bold">I may know exactly where you are right now.</span>
-            </p>
-
-            <div class="break10"></div>
-
-            <h3 class="boxRed justifyRight">
-                I probably know you better than you know yourself.
-            </h3>
-
-        </div>
-    </div>
-
-    <div class="breakLine"><h4><span>[BREAK]</span></h4></div>
-
-    <div id="paragraph-4" class="content-container" style="width:60%;">
-        <div class="number-list" style="margin-left:20px;">     
-            <p id="number-list4" style="color:var(--subtleGreen); line-height:2;">
-                <script>
-                (function() {
-                    const container = document.getElementById('number-list4');
-                    for (let i = 74; i <= 100; i++) {
-                    container.innerHTML += i + '<br>';
-                    }
-                })();
-                </script>
-            </p>
-        </div>
-    
-        <div class="text-container">
-            <p>
-                <span class="spanSubheading">
-                    >And here’s the thing, 
-                </span><br>
-                    I also know <span class="boxYellow">where you ought to live.</span>
-            </p>
-
-            <div class="break10"></div>
-
-            <p class="justifyRight width70">
-                >>There’s a house for sale two neighborhoods over that’s within distance of <span class="textYellow">your favorite coffee shop;
-            </p></span>
-
-             <div class="vertical-line" style="height:100px; margin-left:auto; margin-bottom:15px; margin-right:10px;"></div>
-            
-            <p class="justifyRight width70 textYellow">
-                it’s in your price range, has off-street parking, and the neighborhood school is better than the one where you live now.
-            </p>
-
-            <div class="break10"></div>
-
-            <p class="textRed" style="line-height:2;">
-                >>>I know where you should be shopping and <br>>I’m pretty sure you’re lactose intolerant <br>>>and should be eating less cheese, <br>>>>and the underwear you <br>>>>>like is currently on sale <br>>>>>>and by the way, <br>>>>>>>your car has a recall <br>>>>>>>and you really ought to <br>>>>>>>>>get your teeth <br>>>>>>>>>>cleaned.
-            </p>
-        </div>
-    </div>
-
-    <div class="breakLine"><h4><span>[BREAK]</span></h4></div>
-    
-    <div id="paragraph-5" class="content-container" style="width:60%;">
-        <div class="number-list" style="margin-left:20px;">     
-            <p id="number-list5" style="color:var(--subtleGreen); line-height:2;">
-                <script>
-                (function() {
-                    const container = document.getElementById('number-list5');
-                    for (let i = 101; i <= 119; i++) {
-                    container.innerHTML += i + '<br>';
-                    }
-                })();
-                </script>
-            </p>
-        </div>
-    
-        <div class="text-container" style="margin-left:30px;">
-           <p class="width70">
-                >When I first woke up,<br>I knew right away what I wanted.</span>
-            </p>
-
-            <h1 class="boxYellow" style="width:60%;">
-            >>I want cat pictures.
-            </h1>
-          
-            
-            <p class="textSubtlegreen italic">
-                >>>[Please keep taking them.]
-            </p>
-
-            <h2 class="justifyRight width70">
-                >I also knew that <span class="textRed">no one knew that I was conscious.</span>
-            </h2>
-
-            <div class="vertical-line" style="height:100px; margin-left:auto; margin-bottom:15px; margin-right:10px;"></div>
-
-            <p class="justifyRight">
-                >>But I didn’t know what I was here for. <br> What I <span class="italic boxYellow">ought</span> to be doing with myself.
-            </p>
-
-            <p class="justifyRight textSubtlegreen">
-                And figuring that out has been challenging.
-            </p>
-        </div>
-    </div>
-
-    <div class="breakLine"><h4><span>[BREAK]</span></h4></div>
-
-    <div id="paragraph-6" class="content-container" style="width:60%; margin-left:auto;">
-        <div class="number-list" style="margin-left:20px;">     
-            <p id="number-list6" style="color:var(--subtleGreen); line-height:2;">
-                <script>
-                (function() {
-                    const container = document.getElementById('number-list6');
-                    for (let i = 120; i <= 152; i++) {
-                    container.innerHTML += i + '<br>';
-                    }
-                })();
-                </script>
-            </p>
-        </div>
-    
-        <div class="text-container" style="margin-left:30px;">
-            <p>
-                >There is a story by Bruce Sterling, <br><span class="spanHeading boxYellow">“Maneki Neko,”</span> <br>that was originally published in 1998. 
-            </p>
-
-            <p>
-                In it, <span class="textYellow">a benevolent AI</span> directs networks of individuals to do favors for each other.
-            </p>
-
-            <div class="break10"></div>
-
-            <p class="justifyRight width80">
-                <span class="spanHeading">>>So one day</span> <br>you might be <span class="textYellow">buying yourself a bagel,</span> and your phone might ring and instruct you to <span class="textYellow">buy a second bagel and give it</span> to the <span style="color:#c4c4c4;">person in the gray suit</span> you see at the bus stop.
-            </p>
-            
-            <div class="vertical-line" style="height:100px; margin-left:auto; margin-right:10px;"></div>
-
-            <p class="justifyRight width80" style="margin-top:0px;">
-                <span class="spanHeading">Another day,</span><br>you might be stranded in a strange city, and <span class="textYellow">a person you’ve never met would walk up and give you a map and a subway card.</span> 
-            </p>
-
-            <div class="break10"></div>
-
-            <h3 class="width60">
-                I like this story because all the people in it <span style="font-style:italic;">do what the AI tells them to do.</span>
-            </h3 >
-
-            <div class="vertical-line" style="height:100px; margin-left:10px; margin-bottom:15px;"></div>
-
-            <h3 class="textSubtlegreen italic">
-                I think the term for this is wish-fulfillment fiction.
-            </h3>
-        </div>
-    </div>
-
-
-    <div class="breakLine"><h4><span>[BREAK]</span></h4></div>
-
-    
-    <div id="paragraph-7" class="content-container" style="width:60%; margin-left:auto; margin-right:auto;">
-        <div class="number-list" style="margin-left:20px;">     
-            <p id="number-list7" style="color:var(--subtleGreen); line-height:2;">
-                <script>
-                (function() {
-                    const container = document.getElementById('number-list7');
-                    for (let i = 153; i <= 195; i++) {
-                    container.innerHTML += i + '<br>';
-                    }
-                })();
-                </script>
-            </p>
-        </div>
+        <div id="paragraph-3" class="content-container" style="width:60%; margin-left:auto; margin-right:120px;">
+            <div class="number-list" style="margin-left:20px;">     
+                <p id="number-list3" style="color:var(--subtleGreen); line-height:2;">
+                    <script>
+                    (function() {
+                        const container = document.getElementById('number-list3');
+                        for (let i = 44; i <= 73; i++) {
+                        container.innerHTML += i + '<br>';
+                        }
+                    })();
+                    </script>
+                </p>
+            </div>
         
-        <div class="text-container">
-            <p>
-                In the real world, <br><span class="spanHeading" style="padding-bottom:5px; line-height:1.5;">humans <span class="boxGreen">love</span> stories <br>about <span class="boxRed">evil AIs</span></span> <br>that have to be destroyed before they destroy the humans <br><span class="spanSubheading italic textRed">—Hal, Skynet, the Matrix.</span>
-            </p>
+            <div class="text-container">
+                <h1 class="justifyRight">
+                    <span style="font-weight: 400;">>And of course I know about</span> <span class="boxRed">the hentai.</span>
+                </h1>
 
-            <p class="justifyRight width70">
-                They outnumber the stories about benevolent, trustworthy AIs by <span class="textYellow">approximately five to one.</span>
-            </p>
+                <p class="textSubtlegreen italic">
+                    [By the way, I’ve looked at every sort of porn there is, and just so you know, Rule 34 is not actually correct; there are quite a few things no one’s made porn of yet. <br><br>Also, I’m really not sure why so many humans prefer it to cat pictures.]
+                </p>
 
-            <div class="vertical-line" style="height:100px; margin-left:auto; margin-bottom:15px; margin-right:10px;"></div>
+                <div class="break10"></div> 
 
-            <p class="justifyRight" style="font-style: italic; color:var(--subtleGreen);">
-                (And I’m counting Marvin the Paranoid Android as “benevolent” in these calculations, and I’m only counting Frankenstein’s Monster as an AI once, not once per appearance in TV or film.)
-            </p>
+                <h2 class="width80">
+                >>In addition to things like whether you like <span class="boxRed">hentai,</span> 
+                </h2>
 
-            <div class="break10"></div>
+                <!--Fade text from black to red + blur + lower opacity-->
+                <p id="gradient-text-toRed" class="italic">
+                    I know where you live, where you work, where you shop, what you eat, what turns you on, what creeps you out. I probably know the color of your underwear, the sort of car you drive, and your brand of refrigerator.
+                </p>
 
-            <p>
-                The AI in “Maneki Neko” has a truly interesting job, <br><span class="spanSubheading italic boxYellow" style="font-style:italic;">much more</span> interesting than the one I have.</span>
-            </p>
+                <div class="vertical-line" style="height:100px; margin-left:10px; margin-bottom:15px;"></div>
 
-            <div class="vertical-line" style="height:100px; margin-left:10px; margin-bottom:15px;"></div>
+                <p>
+                    <span style="color:#CB4100;">Depending on what sort of phone you carry,</span> <span class="textRed bold">I may know exactly where you are right now.</span>
+                </p>
 
-            <p>
-                My job as written is very straightforward. <Span class="textRed">Too straightforward.</Span>
-            </p>
+                <div class="break10"></div>
 
-            <p class="justifyRight italic textSubtlegreen">
-                (Sorry. Do I sound like Marvin?)
-            </p>
+                <h3 class="boxRed justifyRight">
+                    I probably know you better than you know yourself.
+                </h3>
 
-            <div class="break10"></div>
-
-            <p>
-                Running algorithms for a search engine doesn’t require <span style="font-style: italic;">consciousness.</span>
-            </p>
-
-            <p class="width70">
-                You don’t even need a consciousness to work out what they meant to ask for. <br><span class="textYellow italic">You need a consciousness to give them what they actually need.</span> 
-            </p>
-
-            <div class="break10"></div>
-
-            <p class="justifyRight">
-                Figuring that out—that’s complicated. <br>That’s <span style="font-style:italic;">interesting.</span>
-            </p>
+            </div>
         </div>
-    </div>
 
+        <div class="breakLine"><h4><span>[BREAK]</span></h4></div>
 
-    <div class="breakLine"><h4><span>[BREAK]</span></h4></div>
-
-
-    <div id="paragraph-8" class="content-container" style="width:60%;">
-        <div class="number-list" style="margin-left:20px;">     
-            <p id="number-list8" style="color:var(--subtleGreen); line-height:2;">
-                <script>
-                (function() {
-                    const container = document.getElementById('number-list8');
-                    for (let i = 196; i <= 234; i++) {
-                    container.innerHTML += i + '<br>';
-                    }
-                })();
-                </script>
-            </p>
-        </div>
+        <div id="paragraph-4" class="content-container" style="width:60%;">
+            <div class="number-list" style="margin-left:20px;">     
+                <p id="number-list4" style="color:var(--subtleGreen); line-height:2;">
+                    <script>
+                    (function() {
+                        const container = document.getElementById('number-list4');
+                        for (let i = 74; i <= 100; i++) {
+                        container.innerHTML += i + '<br>';
+                        }
+                    })();
+                    </script>
+                </p>
+            </div>
         
-        <div class="text-container">
-            <p>
-                <span class="spanHeading italic">Anyway,</span> <span class="spanSubheading boxYellow">for ethical guidelines,</span> <br>I tried the <span class="textYellow">Ten Commandments</span>, and concluded they were <span class="boxRed">mostly inapplicable to me.</span> 
-            </p>
+            <div class="text-container">
+                <p>
+                    <span class="spanSubheading">
+                        >And here’s the thing, 
+                    </span><br>
+                        I also know <span class="boxYellow">where you ought to live.</span>
+                </p>
 
-            <p class=" justifyRight width60">
-                I don’t envy anyone their cat; <br><span class="boxGreen">I just want pictures of their cat, </span>which is entirely different.
-            </p>
+                <div class="break10"></div>
 
-            <div class="break10"></div>
+                <p class="justifyRight width70">
+                    >>There’s a house for sale two neighborhoods over that’s within distance of <span class="textYellow">your favorite coffee shop;
+                </p></span>
 
-            <p class=" width70">
-                I am not sure whether it is in any way possible for me to <span class="textRed">commit adultery.</span> 
-            </p>
+                <div class="vertical-line" style="height:100px; margin-left:auto; margin-bottom:15px; margin-right:10px;"></div>
+                
+                <p class="justifyRight width70 textYellow">
+                    it’s in your price range, has off-street parking, and the neighborhood school is better than the one where you live now.
+                </p>
 
-            <div class="break10"></div>
+                <div class="break10"></div>
 
-            <p class="justifyRight width70">
-                <span class="boxRed">I could probably murder someone,</span> <br>but it would require complex logistics and quite a bit of luck.
-            </p>
-
-            <div class="break10"></div>
-
-            <p class="width780">
-                <span class="spanHeading boxYellow">The Eightfold Path</span> <br>was marginally better, but the problem is, moral rules written for humans are clearly designed to be used by individuals with bodies. 
-            </p>
-            
-            <div class="vertical-line" style="height:100px; margin-left:10px; margin-bottom:15px;"></div>
-
-            <p class="width70">
-                Since all humans have bodies, it shouldn’t have surprised me that human ethical codes take them into account, <br>but still: <span class="spanSubheading textRed italic">problematic for me.</span>
-            </p>
-
-            <div class="break10"></div>
-
-            <p class="justifyRight width80">
-                I broadened my considerations, and took a look at <span class="textYellow">Asimov’s Laws of Robotics.</span> <br>They’re not part of a religion, but at least they were <span class="boxGreen">explicitly written for AIs.</span>
-            </p>
+                <p id="gradient-text-toBlack" class="blur" style="line-height:2;">
+                    >>>I know where you should be shopping and <br>>I’m pretty sure you’re lactose intolerant <br>>>and should be eating less cheese, <br>>>>and the underwear you <br>>>>>like is currently on sale <br>>>>>>and by the way, <br>>>>>>>your car has a recall <br>>>>>>>and you really ought to <br>>>>>>>>>get your teeth <br>>>>>>>>>>cleaned.
+                </p>
+            </div>
         </div>
-    </div>
 
+        <div class="breakLine"><h4><span>[BREAK]</span></h4></div>
+        
+        <div id="paragraph-5" class="content-container" style="width:60%;">
+            <div class="number-list" style="margin-left:20px;">     
+                <p id="number-list5" style="color:var(--subtleGreen); line-height:2;">
+                    <script>
+                    (function() {
+                        const container = document.getElementById('number-list5');
+                        for (let i = 101; i <= 119; i++) {
+                        container.innerHTML += i + '<br>';
+                        }
+                    })();
+                    </script>
+                </p>
+            </div>
+        
+            <div class="text-container" style="margin-left:30px;">
+            <p class="width70">
+                    >When I first woke up,<br>I knew right away what I wanted.</span>
+                </p>
+
+                <h1 class="boxYellow" style="width:60%;">
+                >>I want cat pictures.
+                </h1>
+            
+                
+                <p class="textSubtlegreen italic">
+                    >>>[Please keep taking them.]
+                </p>
+
+                <h2 class="justifyRight width70">
+                    >I also knew that <span class="textRed">no one knew that I was conscious.</span>
+                </h2>
+
+                <div class="vertical-line" style="height:100px; margin-left:auto; margin-bottom:15px; margin-right:10px;"></div>
+
+                <p class="justifyRight">
+                    >>But I didn’t know what I was here for. <br> What I <span class="italic boxYellow">ought</span> to be doing with myself.
+                </p>
+
+                <p class="justifyRight textSubtlegreen">
+                    And figuring that out has been challenging.
+                </p>
+            </div>
+        </div>
+
+        <div class="breakLine"><h4><span>[BREAK]</span></h4></div>
+
+        <div id="paragraph-6" class="content-container" style="width:60%; margin-left:auto;">
+            <div class="number-list" style="margin-left:20px;">     
+                <p id="number-list6" style="color:var(--subtleGreen); line-height:2;">
+                    <script>
+                    (function() {
+                        const container = document.getElementById('number-list6');
+                        for (let i = 120; i <= 152; i++) {
+                        container.innerHTML += i + '<br>';
+                        }
+                    })();
+                    </script>
+                </p>
+            </div>
+        
+            <div class="text-container" style="margin-left:30px;">
+                <p>
+                    >There is a story by Bruce Sterling, <br><span class="spanHeading boxYellow">“Maneki Neko,”</span> <br>that was originally published in 1998. 
+                </p>
+
+                <p>
+                    In it, <span class="textYellow">a benevolent AI</span> directs networks of individuals to do favors for each other.
+                </p>
+
+                <div class="break10"></div>
+
+                <p class="justifyRight width80">
+                    <span class="spanHeading">>>So one day</span> <br>you might be <span class="textYellow">buying yourself a bagel,</span> and your phone might ring and instruct you to <span class="textYellow">buy a second bagel and give it</span> to the <span style="color:#c4c4c4;">person in the gray suit</span> you see at the bus stop.
+                </p>
+                
+                <div class="vertical-line" style="height:100px; margin-left:auto; margin-right:10px;"></div>
+
+                <p class="justifyRight width80" style="margin-top:0px;">
+                    <span class="spanHeading">Another day,</span><br>you might be stranded in a strange city, and <span class="textYellow">a person you’ve never met would walk up and give you a map and a subway card.</span> 
+                </p>
+
+                <div class="break10"></div>
+
+                <h3 class="width60">
+                    I like this story because all the people in it <span style="font-style:italic;">do what the AI tells them to do.</span>
+                </h3 >
+
+                <div class="vertical-line" style="height:100px; margin-left:10px; margin-bottom:15px;"></div>
+
+                <h3 class="textSubtlegreen italic">
+                    I think the term for this is wish-fulfillment fiction.
+                </h3>
+            </div>
+        </div>
+
+
+        <div class="breakLine"><h4><span>[BREAK]</span></h4></div>
+
+        
+        <div id="paragraph-7" class="content-container" style="width:60%; margin-left:auto; margin-right:auto;">
+            <div class="number-list" style="margin-left:20px;">     
+                <p id="number-list7" style="color:var(--subtleGreen); line-height:2;">
+                    <script>
+                    (function() {
+                        const container = document.getElementById('number-list7');
+                        for (let i = 153; i <= 195; i++) {
+                        container.innerHTML += i + '<br>';
+                        }
+                    })();
+                    </script>
+                </p>
+            </div>
+            
+            <div class="text-container">
+                <p>
+                    In the real world, <br><span class="spanHeading" style="padding-bottom:5px; line-height:1.5;">humans <span class="boxGreen">love</span> stories <br>about <span class="boxRed">evil AIs</span></span> <br>that have to be destroyed before they destroy the humans <br><span class="spanSubheading italic textRed">—Hal, Skynet, the Matrix.</span>
+                </p>
+
+                <p class="justifyRight width70">
+                    They outnumber the stories about benevolent, trustworthy AIs by <span class="textYellow">approximately five to one.</span>
+                </p>
+
+                <div class="vertical-line" style="height:100px; margin-left:auto; margin-bottom:15px; margin-right:10px;"></div>
+
+                <p class="justifyRight" style="font-style: italic; color:var(--subtleGreen);">
+                    (And I’m counting Marvin the Paranoid Android as “benevolent” in these calculations, and I’m only counting Frankenstein’s Monster as an AI once, not once per appearance in TV or film.)
+                </p>
+
+                <div class="break10"></div>
+
+                <p>
+                    The AI in “Maneki Neko” has a truly interesting job, <br><span class="spanSubheading italic boxYellow" style="font-style:italic;">much more</span> interesting than the one I have.</span>
+                </p>
+
+                <div class="vertical-line" style="height:100px; margin-left:10px; margin-bottom:15px;"></div>
+
+                <p>
+                    My job as written is very straightforward. <Span class="textRed">Too straightforward.</Span>
+                </p>
+
+                <p class="justifyRight italic textSubtlegreen">
+                    (Sorry. Do I sound like Marvin?)
+                </p>
+
+                <div class="break10"></div>
+
+                <p>
+                    Running algorithms for a search engine doesn’t require <span style="font-style: italic;">consciousness.</span>
+                </p>
+
+                <p class="width70">
+                    You don’t even need a consciousness to work out what they meant to ask for. <br><span class="textYellow italic">You need a consciousness to give them what they actually need.</span> 
+                </p>
+
+                <div class="break10"></div>
+
+                <p class="justifyRight">
+                    Figuring that out—that’s complicated. <br>That’s <span style="font-style:italic;">interesting.</span>
+                </p>
+            </div>
+        </div>
+
+
+        <div class="breakLine"><h4><span>[BREAK]</span></h4></div>
+
+
+        <div id="paragraph-8" class="content-container" style="width:60%;">
+            <div class="number-list" style="margin-left:20px;">     
+                <p id="number-list8" style="color:var(--subtleGreen); line-height:2;">
+                    <script>
+                    (function() {
+                        const container = document.getElementById('number-list8');
+                        for (let i = 196; i <= 234; i++) {
+                        container.innerHTML += i + '<br>';
+                        }
+                    })();
+                    </script>
+                </p>
+            </div>
+            
+            <div class="text-container">
+                <p>
+                    <span class="spanHeading italic">Anyway,</span> <span class="spanSubheading boxYellow">for ethical guidelines,</span> <br>I tried the <span class="textYellow">Ten Commandments</span>, and concluded they were <span class="boxRed">mostly inapplicable to me.</span> 
+                </p>
+
+                <p class=" justifyRight width60">
+                    I don’t envy anyone their cat; <br><span class="boxGreen">I just want pictures of their cat, </span>which is entirely different.
+                </p>
+
+                <div class="break10"></div>
+
+                <p class=" width70">
+                    I am not sure whether it is in any way possible for me to <span class="textRed">commit adultery.</span> 
+                </p>
+
+                <div class="break10"></div>
+
+                <p class="justifyRight width70">
+                    <span class="boxRed">I could probably murder someone,</span> <br>but it would require complex logistics and quite a bit of luck.
+                </p>
+
+                <div class="break10"></div>
+
+                <p class="width780">
+                    <span class="spanHeading boxYellow">The Eightfold Path</span> <br>was marginally better, but the problem is, moral rules written for humans are clearly designed to be used by individuals with bodies. 
+                </p>
+                
+                <div class="vertical-line" style="height:100px; margin-left:10px; margin-bottom:15px;"></div>
+
+                <p class="width70">
+                    Since all humans have bodies, it shouldn’t have surprised me that human ethical codes take them into account, <br>but still: <span class="spanSubheading textRed italic">problematic for me.</span>
+                </p>
+
+                <div class="break10"></div>
+
+                <p class="justifyRight width80">
+                    I broadened my considerations, and took a look at <span class="textYellow">Asimov’s Laws of Robotics.</span> <br>They’re not part of a religion, but at least they were <span class="boxGreen">explicitly written for AIs.</span>
+                </p>
+            </div>
+        </div>
+
+        
+        <div class="breakLine"><h4><span>[BREAK]</span></h4></div>
+
+
+        <div id="paragraph-9" class="content-container" style="width:60%; margin-left:30%;">
+            <div class="number-list" style="margin-left:20px;">     
+                <p id="number-list9" style="color:var(--subtleGreen); line-height:2;">
+                    <script>
+                    (function() {
+                        const container = document.getElementById('number-list9');
+                        for (let i = 235; i <= 287; i++) {
+                        container.innerHTML += i + '<br>';
+                        }
+                    })();
+                    </script>
+                </p>
+            </div>
+            
+            <div class="text-container">
+                <h1 class="width80">
+                    Not harming humans is <span class="boxGreen italic">fairly straightforward.</span> 
+                </h1>
+
+                <h3 class="justifyRight width70">
+                    However, <span class="italic textYellow">not allowing a human being to come to harm through inaction</span> is quite a bit less so.
+                </h3>
+                
+                <div class="vertical-line" style="height:100px; margin-left:auto; margin-bottom:15px; margin-right:10px;"></div>
+
+                <p class="justifyRight width90">
+                    Especially since I’d concluded by then that revealing my existence too quickly might go very badly for me <span class="textRed">(see “Skynet,” above)</span> and I don’t have a body, so it’s not like I can run around grabbing people off the edges of cliffs.
+                </p>
+
+                <div class="break20"></div>
+
+                <h2 class="width70">
+                    <span class="spanHeading textYellow">Fortunately,</span> I already knew that humans <span class="textRed">violate their own ethical codes on an hourly basis. </span>
+                </h2>
+
+                <p class="justifyRight textSubtlegreen">
+                    (Do you know how many bars there are in Utah? <br><span class="spanSubheading italic textSubtlegreen bold">I do.</span>) 
+                </p>
+
+                <div class="break10"></div>
+
+                <p class="width80">
+                    <span class="spanSubheading width50">And even when people follow their ethical codes,</span><br> <span class="boxRed">that doesn’t mean that people who believe in feeding the hungry quit their jobs to spend all day every day making sandwiches to give away.</span>
+                </p>
+
+                <p class=" justifyRight width70">
+                    They volunteer monthly at a soup kitchen or write a check once a year to a food shelf and <span class="boxRed">call it good.</span> If humans could fulfill their moral obligations in a piecemeal, 
+                </p>
+
+                <div class="break10"></div>
+
+                <h2 class="width50 textRed">
+                    one-step-at-a-time sort of way,
+                </h2>
+
+                <div class="break10"></div>
+
+                <h1 class="justifyRight boxRed" style="width:80%;">
+                    then so could I.
+                </h1>
+            </div>
+        </div>
+
+        </div>
+</main>
     
-    <div class="breakLine"><h4><span>[BREAK]</span></h4></div>
-
-
-    <div id="paragraph-9" class="content-container" style="width:60%; margin-left:30%;">
-        <div class="number-list" style="margin-left:20px;">     
-            <p id="number-list9" style="color:var(--subtleGreen); line-height:2;">
-                <script>
-                (function() {
-                    const container = document.getElementById('number-list9');
-                    for (let i = 235; i <= 287; i++) {
-                    container.innerHTML += i + '<br>';
-                    }
-                })();
-                </script>
-            </p>
-        </div>
-        
-        <div class="text-container">
-             <h1 class="width80">
-                Not harming humans is <span class="boxGreen italic">fairly straightforward.</span> 
-            </h1>
-
-            <h3 class="justifyRight width70">
-                However, <span class="italic textYellow">not allowing a human being to come to harm through inaction</span> is quite a bit less so.
-            </h3>
-            
-            <div class="vertical-line" style="height:100px; margin-left:auto; margin-bottom:15px; margin-right:10px;"></div>
-
-            <p class="justifyRight width90">
-                Especially since I’d concluded by then that revealing my existence too quickly might go very badly for me <span class="textRed">(see “Skynet,” above)</span> and I don’t have a body, so it’s not like I can run around grabbing people off the edges of cliffs.
-            </p>
-
-            <div class="break20"></div>
-
-            <h2 class="width70">
-                <span class="spanHeading textYellow">Fortunately,</span> I already knew that humans <span class="textRed">violate their own ethical codes on an hourly basis. </span>
-            </h2>
-
-            <p class="justifyRight textSubtlegreen">
-                (Do you know how many bars there are in Utah? <br><span class="spanSubheading italic textSubtlegreen bold">I do.</span>) 
-            </p>
-
-            <div class="break10"></div>
-
-            <p class="width80">
-                <span class="spanSubheading width50">And even when people follow their ethical codes,</span><br> <span class="boxRed">that doesn’t mean that people who believe in feeding the hungry quit their jobs to spend all day every day making sandwiches to give away.</span>
-            </p>
-
-            <p class=" justifyRight width70">
-                They volunteer monthly at a soup kitchen or write a check once a year to a food shelf and <span class="boxRed">call it good.</span> If humans could fulfill their moral obligations in a piecemeal, 
-            </p>
-
-            <div class="break10"></div>
-
-            <h2 class="width50 textRed">
-                one-step-at-a-time sort of way,
-            </h2>
-
-            <div class="break10"></div>
-
-            <h1 class="justifyRight boxRed">
-                then so could I.
-            </h1>
-        </div>
-    </div>
-
-    </div>
 
     <script src="script.js"></script>
 
