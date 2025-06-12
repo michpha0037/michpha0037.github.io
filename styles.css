@@ -57,7 +57,6 @@ body{
     display:grid;
     margin:3em;
     overflow-y:hidden;
-    /*overflow-y:scroll;*/
 
     /*Website typeface*/
     font-family:'JetBrains Mono';
@@ -416,14 +415,14 @@ h4 span{
 
 /*-----------------------------------------------------------------*/
 /*Splash screen elements + animations*/
-#welcome-popup.popup{
+#welcome-box.title-Box{
     width:fit-content;
     padding:30px;
     padding-bottom:5px;
     margin-bottom:15px;
     border: 1px solid var(--mainGreen);
     opacity:0;
-    animation: popup 2s 1s ease forwards;
+    animation: title-Box 2s 1s ease forwards;
 }
 
 #welcome-fade{
@@ -433,10 +432,17 @@ h4 span{
 
 #disclaimer-fade{
     opacity:0;
-    animation: welcome-fade 6s 1s ease forwards;
+    animation: welcome-fade 6s 0.5s ease forwards;
 }
 
-@keyframes popup{
+#refresh-warning{
+    font-size: 13px; 
+    color:var(--accentYellow);
+    opacity:0;
+    animation: welcome-fade 7s 0.5s ease forwards;
+}
+
+@keyframes title-Box{
     from{opacity:0;}
     to{opacity:1;}
 }
@@ -450,6 +456,12 @@ h4 span{
     from{opacity:0;}
     to{opacity:1;}
 }
+
+@keyframes refresh-warning{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
 
 /*-----------------------------------------------------------------*/
 /*Hide elements*/
@@ -493,7 +505,7 @@ h4 span{
 #list8.visible{
     opacity:1;
 }
-#list19.visible{
+#list9.visible{
     opacity:1;
 }
 
@@ -599,13 +611,24 @@ h4 span{
 /*Sentence-Paragraph effects (P1-P56)*/
 
 #p1, #p2, #p3, #p4, #p5, #p6, #p7, #p8, #p9, #p10,
-#p11, #p12, #p13, #p14, #p15, #p16, #p17, #p18, #p19, #p20,
+#p11, #p12, #p14, #p15, #p16, #p17, #p18, #p20,
 #p21, #p22, #p23, #p24, #p25, #p26, #p27, #p28, #p29, #p30,
 #p31, #p32, #p33, #p34, #p35, #p36, #p37, #p38, #p39, #p40,
 #p41, #p42, #p43, #p44, #p45, #p46, #p47, #p48, #p49, #p50,
 #p51, #p52, #p53, #p54, #p55, #p56 {
     opacity: 0;
     transition: opacity 0.1s linear;
+}
+
+#p13{
+    opacity: 0;
+    transition: opacity 4s linear;
+}
+
+
+#p19{
+     opacity: 0;
+    transition: opacity 8s linear;
 }
 
 #p1.visible{
@@ -832,8 +855,216 @@ h4 span{
     opacity: 1;
 }
 
+/*-----------------------------------------------------------------*/
+/*Popup Images*/
+.popup{
+    width:fit-content;
+    justify-content: center;
+    align-items: center;
+    padding:5px;
+    border: 5px double var(--subtleGreen);
+    background-color: var(--primaryBackground);
 
+    z-index:400;
+}
 
+.popup img{
+    width:auto;
+    height:auto;
+    max-width:300px;
+    max-height:300px;
+}
 
+#popup1{
+    position: absolute;
+    left:150px;
+    top:550px;
+}
+
+#popup2{
+    position: absolute;
+    right:150px;
+    top:1000px;
+}
+
+#popup3{
+    position: absolute;
+    right:100px;
+    top:1150px;
+}
+
+#popup4{
+    position: absolute;
+    right:225px;
+    top:1300px;
+}
+
+#popup5{
+    position: absolute;
+    left:50px;
+    top:1500px;
+}
+
+#popup6{
+    position: absolute;
+    left:75px;
+    top:1700px;
+}
+
+#popup7{
+    position: absolute;
+    left:75px;
+    top:2300px;
+}
+
+#popup8{
+    position: absolute;
+    right:225px;
+    top:3700px;
+}
+
+#popup9{
+    position: absolute;
+    right:150px;
+    top:3850px;
+}
+
+#popup10{
+    position: absolute;
+    right:450px;
+    top:4060px;
+}
+
+#popup11{
+    position: absolute;
+    left:70px;
+    top:4420px;
+}
+
+#popup12{
+    position: absolute;
+    right:490px;
+    top:4890px;
+}
+
+#popup13{
+    position: absolute;
+    right:250px;
+    top:4750px;
+}
+
+#popup14{
+    position: absolute;
+    left:200px;
+    top:6200px;
+}
+
+#popup15{
+    position: absolute;
+    left:350px;
+    top:6350px;
+}
+
+#popup16{
+    position: absolute;
+    right:45px;
+    top:6570px;
+}
+
+#popup17{
+    position: absolute;
+    right:200px;
+    top:9100px;
+}
+
+#popup1,#popup2,#popup3,#popup4,#popup5,#popup6,#popup7,#popup8,#popup9,#popup10,#popup11,#popup12,#popup13,#popup14,#popup15,#popup16,#popup17 {
+    opacity:0;
+    transition: transform 0.05s linear;
+}
+
+#popup1.pop{
+    transform:scale(1.1);
+    opacity:1;
+}
+
+#popup2.pop{
+    transform:scale(1.1);
+    opacity:1;
+}
+
+#popup3.pop{
+    transform:scale(1.1);
+    opacity:1;
+}
+
+#popup4.pop{
+    transform:scale(1.1);
+    opacity:1;
+}
+
+#popup5.pop{
+    transform:scale(1.1);
+    opacity:1;
+}
+
+#popup6.pop{
+    transform:scale(1.1);
+    opacity:1;
+}
+
+#popup7.pop{
+    transform:scale(1.1);
+    opacity:1;
+}
+
+#popup8.pop{
+    transform:scale(1.1);
+    opacity:1;
+}
+
+#popup9.pop{
+    transform:scale(1.1);
+    opacity:1;
+}
+
+#popup10.pop{
+    transform:scale(1.1);
+    opacity:1;
+}
+
+#popup11.pop{
+    transform:scale(1.1);
+    opacity:1;
+}
+
+#popup12.pop{
+    transform:scale(1.1);
+    opacity:1;
+}
+
+#popup13.pop{
+    transform:scale(1.1);
+    opacity:1;
+}
+
+#popup14.pop{
+    transform:scale(1.1);
+    opacity:1;
+}
+
+#popup15.pop{
+    transform:scale(1.1);
+    opacity:1;
+}
+
+#popup16.pop{
+    transform:scale(1.1);
+    opacity:1;
+}
+
+#popup17.pop{
+    transform:scale(1.1);
+    opacity:1;
+}
 
 

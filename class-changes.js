@@ -1,4 +1,3 @@
-//This is all filler text. Will change it later to fit my needs.
 const classChanges = [
   //Beginning elements load in
   { time: 1, target:"#video-fade" , add:"visible"},
@@ -7,9 +6,8 @@ const classChanges = [
 
   //1st Paragraph
    { time: 6.5, target:"#p1" , add:"visible"},
-   { time: 6.85, target:"body", add:"redBg"}, //sometimes this doesn't work for some reason.
-   { time: 6.85, target:"#header-footer", add:"redCol"},
-  //Need a trigger here for image popup-moral codes
+   { time: 6.5, target:"body", add:"redBg"},
+   { time: 6.5, target:"#header-footer", add:"redCol"},
    { time: 7, target:"#red1" , remove:"hidden"},
    { time: 7, target:"body", remove:"redBg"},
    { time: 7, target:"#header-footer", remove:"redCol"},
@@ -17,6 +15,7 @@ const classChanges = [
    { time: 9, target:"#p2", add:"visible"},
    { time: 12, target:"#p3", add:"visible"},
    { time: 17, target:"#p4", add:"visible"},
+   { time: 18, target:"#popup1", add:"pop"},
    { time: 24, target:"#l1", add:"visible"},
    { time: 26, target:"#p5", add:"visible"},
    { time: 27, target:"#break1", add:"visible"},
@@ -24,9 +23,17 @@ const classChanges = [
    //2nd Paragraph
    { time: 28, target: "#list2", add: "visible" },
    { time: 28, target:"#p6", add:"visible"},
-   //Need to add a trigger here for image popup-religious, hair
+
+   { time: 32, target:"#popup2", add:"pop"},
+   { time: 32.5, target:"#popup3", add:"pop"},
+   { time: 33, target:"#popup4", add:"pop"},
+
    { time: 41, target:"#p7", add:"visible"},
    { time: 46, target:"#p8", add:"visible"},
+
+   { time: 50, target:"#popup5", add:"pop"},
+   { time: 53, target:"#popup6", add:"pop"},
+
    { time: 55, target:"#l2", add:"visible"},
    { time: 56, target:"#p9", add:"visible"},
    { time: 58, target:"#break2", add:"visible"},
@@ -35,10 +42,12 @@ const classChanges = [
    { time: 59, target: "#list3", add: "visible" },
    { time: 59, target:"#p10", add:"visible"},
    { time: 62, target:"#p11", add:"visible"},
+   { time: 71, target:"#popup7", add:"pop"},
    { time: 72, target:"#p12", add:"visible"},
    { time: 75, target:"#p13", add:"visible"},
+   { time: 84.5, target:"#l3", add:"visible"},
    { time: 85, target:"#p14", add:"visible"},
-   { time: 85.5, target:"#l3", add:"visible"},
+   
 
    { time: 91, target:"#p15", add:"visible"},
    { time: 91, target:"body", add:"redBg"}, //sometimes this doesn't work for some reason.
@@ -53,9 +62,14 @@ const classChanges = [
    { time: 94, target: "#list4", add: "visible" },
    { time: 95, target:"#p16", add:"visible"},
    { time: 98, target:"#p17", add:"visible"},
+   { time: 101, target:"#popup8", add:"pop"},
    { time: 102, target:"#l4", add:"visible"},
    { time: 103, target:"#p18", add:"visible"},
+   { time: 104, target:"#popup9", add:"pop"},
    { time: 109, target:"#p19", add:"visible"},
+
+   { time: 113, target:"#popup10", add:"pop"},
+   { time: 118, target:"#popup11", add:"pop"},
 
    { time: 119, target:"body", add:"redBg"}, 
    { time: 119, target:"#header-footer", add:"redCol"},
@@ -67,8 +81,11 @@ const classChanges = [
    { time: 121, target: "#list5", add: "visible" },
    { time: 121, target:"#p20", add:"visible"},
    { time: 124, target:"#p21", add:"visible"},
-   { time: 125, target:"#p22", add:"visible"},
-   { time: 128, target:"#p23", add:"visible"},
+   { time: 125, target:"#popup12", add:"pop"},
+   { time: 125.5, target:"#popup13", add:"pop"},
+
+   { time: 126, target:"#p22", add:"visible"},
+   { time: 129, target:"#p23", add:"visible"},
 
    { time: 130, target:"#l5", add:"visible"},
    { time: 132, target:"#p24", add:"visible"},
@@ -80,8 +97,13 @@ const classChanges = [
    { time: 139, target:"#p26", add:"visible"},
    { time: 145, target:"#p27", add:"visible"},
    { time: 151, target:"#p28", add:"visible"},
+
+   { time: 153, target:"#popup14", add:"pop"},
+   { time: 156, target:"#popup15", add:"pop"},
+   
    { time: 159, target:"#l6", add:"visible"},
    { time: 161, target:"#p29", add:"visible"},
+   { time: 166, target:"#popup16", add:"pop"},
    { time: 169, target:"#p30", add:"visible"},
    { time: 172, target:"#l7", add:"visible"},
    { time: 173, target:"#p31", add:"visible"},
@@ -106,6 +128,7 @@ const classChanges = [
    { time: 230, target:"#list8", add:"visible"},
    { time: 230, target:"#p41", add:"visible"},
    { time: 236, target:"#p42", add:"visible"},
+   { time: 240, target:"#popup17", add:"pop"},
    { time: 243, target:"#p43", add:"visible"},
    { time: 247, target:"#p44", add:"visible"},
    { time: 253, target:"#p45", add:"visible"},
@@ -115,7 +138,7 @@ const classChanges = [
    { time: 279, target:"#break8", add:"visible"},
    
    //9th Paragraph
-   { time: 280, target:"#list9", add:"visible"},
+   { time: 279.5, target:"#list9", add:"visible"},
    { time: 280, target:"#p48", add:"visible"},
    { time: 283, target:"#p49", add:"visible"},
    { time: 288, target:"#l11", add:"visible"},
@@ -128,7 +151,7 @@ const classChanges = [
 
    { time: 332, target:"body", add:"redBg"}, 
    { time: 332, target:"#header-footer", add:"redCol"},
-   { time: 332.5, target:"body", remove:"redBg"}, 
-   { time: 332.5, target:"#header-footer", remove:"redCol"},
-   { time: 333, target:"#p56", add:"visible"}
+   { time: 333, target:"body", remove:"redBg"}, 
+   { time: 333, target:"#header-footer", remove:"redCol"},
+   { time: 333.5, target:"#p56", add:"visible"}
 ];
